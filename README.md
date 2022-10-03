@@ -2,9 +2,9 @@
 ## fall-22-mp1-work
 
 
-### Last Name:  
-### First Name: 
-### GitHub Username: 
+### Last Name:  Li
+### First Name: YuXin
+### GitHub Username: CombleKing
 
 ---
 #### General Workflow: 
