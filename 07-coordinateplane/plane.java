@@ -1,4 +1,3 @@
-import java.io.ObjectInputFilter.Status;
 import java.util.Scanner;
 
 public class plane {
@@ -31,11 +30,15 @@ public class plane {
     status = check(cord2);
     }
     while(status != true);
-
     System.out.println(getX(cord2) + " " +getY(cord2));
     System.out.println(getX(cord1) +" "+ getY(cord1));
-    // test your methods below:
+    System.out.println(checkquad(cord1) + " For your first coordinate.");
+    System.out.println(checkquad(cord2) + " For your second coordinate.");
+    System.out.println("Your Euclidean distance is " + eucdistance(getX(cord1), getY(cord1), getX(cord2), getY(cord2)));
+    System.out.println(taxdistance(getX(cord1), getY(cord1), getX(cord2), getY(cord2)));
 
+    s.close();
+    // test your methods below:
   } // end main method
 
   /*
@@ -45,20 +48,16 @@ public class plane {
    * R: ???
    */
 public static boolean check(String p) {
-
     boolean input = true;
     if (p.indexOf("(") != 0){
         input = false; 
       }
-    
     if (p.indexOf(", ") == -1){
         input = false;
     }
-
     if(p.indexOf(")") !=  p.length() - 1){
         input = false;
     }
-  
         return input;
 }
 
@@ -91,15 +90,33 @@ public static boolean check(String p) {
     // return value back to main so it can be used later in the program
     return Integer.parseInt(y);
   }
-
-
   /*
    * N: quadrant
    * P: determine which quadrant the point lies in
    * I: take the cordinates and compare the x and y cords for negativity. 
    * R: integer of the quadrant
    */
+  
+  public static String checkquad( String x){
+      String quad ="";
 
+      if (getX(x) > 0 && getY(x) > 0){
+              quad = "Your coordinate is in Quadrant 1.";
+      }
+      else if(getX(x) > 0 && getY(x) < 0){
+        quad = "Your coordinate is in Quadrant 4.";
+      }
+      else if(getX(x)<0 && getY(x)> 0){
+      quad ="Your coordinate is in Quadrant 2.";
+      }
+      else if(getX(x)>0 && getY(x)>0){
+        quad = " Your coordinate is in Quadrant 3.";
+      }
+       else{
+        quad = "Your coordinate is not in a Quadrant.";
+    }
+      return quad;
+  }
 
   /*
    * N: euclideanDistance
@@ -109,6 +126,12 @@ public static boolean check(String p) {
    * R:
    */
 
+  public static double eucdistance(int x1, int y1, int x2, int y2){
+      double distance;
+      
+    distance = Math.sqrt( Math.pow(x2-x1,2) + Math.pow(y2-y1, 2));
+    return distance;
+  }
   /*
    * N: taxicabDistance
    * P: calculate the distance between two points
@@ -116,5 +139,12 @@ public static boolean check(String p) {
    * I:
    * R:
    */
+
+public static double taxdistance(int x1, int y1, int x2, int y2){
+  double distance;
+
+  distance = Math.abs(x2-x1) + Math.abs(y2-y1);
+  return distance;
+}
 
 } // end class
