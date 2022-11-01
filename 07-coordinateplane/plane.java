@@ -18,7 +18,6 @@ public class plane {
     while(status != true);
    
     // write a statement to store the input
-
     // check if the user input the point correctly
     // if yes, continue code
     // if no, get the input again

@@ -5,6 +5,7 @@ public class classpractice {
         System.out.println(circarea(3));
         System.out.println(cylarea(3, 2));
         System.out.println(triarea(4, 3, 6));
+
     }
 public static double eucdistance(int x1, int y1, int x2, int y2){
     double distance;
@@ -34,7 +35,6 @@ public static double triarea(int a, int b, int c){
     area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
     return area;
 }
-
 }
 
 
