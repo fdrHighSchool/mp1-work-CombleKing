@@ -46,7 +46,7 @@ public class plane {
    * I: String user typed in
    * R: ???
    */
-public static boolean check(String p) {
+  public static boolean check(String p) {
     boolean input = true;
     if (p.indexOf("(") != 0){
         input = false; 
@@ -144,6 +144,5 @@ public static double taxdistance(int x1, int y1, int x2, int y2){
 
   distance = Math.abs(x2-x1) + Math.abs(y2-y1);
   return distance;
-}
-
+  }
 } // end class
