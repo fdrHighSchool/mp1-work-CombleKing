@@ -24,6 +24,7 @@ public class fly{
         else  {
             System.out.println("Please only enter numbers.");
         }
+        input.close();
     }
 
 }

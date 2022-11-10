@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class rng { 
@@ -27,7 +26,7 @@ else if (mode.equalsIgnoreCase("why")){
 else{
     System.out.println("Please enter a difficulty or make sure you spelt it correctly.");
 }
-
+scanner.close();
    }//end of main method
 
 public static void ez() {
@@ -44,6 +43,7 @@ public static void ez() {
           System.out.println("The number that I was thinking of was " + number);
           System.out.println("You were off by " + difference + ", how did you get it wrong?");
      }
+     scanner.close();
     }
 
 
@@ -63,6 +63,7 @@ System.out.println("Congratulations! The Number that I was thinking of is: " + n
          System.out.println("The number that I was thinking of was " + number);
          System.out.println("You were off by " + difference + ", try again next time!");
       }
+      scanner.close();
 }
 
 
@@ -81,6 +82,7 @@ System.out.println("Congratulations! The Number that I was thinking of is: " + n
          System.out.println("The number that I was thinking of was " + number);
          System.out.println("You were off by " + difference + ", try again next time!");
       }
+      scanner.close();
 }
 
 
@@ -98,5 +100,6 @@ System.out.println("How did you know the number was: " + number);
          System.out.println("The number that I was thinking of was " + number);
          System.out.println("You were off by " + difference + ", try again next time!");
         }
+        scanner.close();
     }
 }// end of class
